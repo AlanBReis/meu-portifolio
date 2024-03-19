@@ -43,17 +43,42 @@
 }
 
 .information .job:before {
-    background-image: url('../assets/icons/profissao.svg');
+    background-image: url("../assets/icons/profissao.svg");
 }
 
 .information .location:before {
-    background-image: url('../assets/icons/localizacao.svg');
+    background-image: url("../assets/icons/localizacao.svg");
 }
 
 .information .email:before {
-    background-image: url('../assets/icons/email.svg');
+    background-image: url("../assets/icons/email.svg");
 }
 
 .information .phone:before {
-    background-image: url('../assets/icons/contato.svg');
+    background-image: url("../assets/icons/contato.svg");
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        flex-direction: row;
+        grid-template-areas:
+            "photo title"
+            "photo information";
+    }
+
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 400px;
+    }
+
+    .header .information {
+        grid-area: information;
+    }
 }
